@@ -4,4 +4,5 @@ RUN apt-get update && \
     postgresql \
     redis-server \
     tree \
-    bsdmainutils
+    bsdmainutils　\
+    ruby
