@@ -1,0 +1,21 @@
+version: '2'
+services:
+  shell:
+    build: .
+    ports:
+      - "80:4200"
+    environment:
+      SIAB_USER: webuser
+      SIAB_HOME: /home/webuser
+      SIAB_GROUP: user
+      SIAB_PASSWORD: password
+      SIAB_SUDO: 'true'
+      SIAB_SSL: 'false'
+    volumes:
+      - /home/ec2-user/w3a:/home/webuser
+
+  db:
+    image: postgres
+  redis:
+    image: redis
+
