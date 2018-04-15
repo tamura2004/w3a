@@ -1,7 +1,6 @@
 require "pathname"
 
 file = Pathname.pwd + "10m.csv"
-FileUtils.rm_rf(base) if base.exist?open("10m.csv","w")
 
 file.open("w") do |fh|
   10_000_000.times do |i|
