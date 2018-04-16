@@ -12,7 +12,7 @@ services:
       SIAB_SUDO: 'true'
       SIAB_SSL: 'false'
     volumes:
-      - /home/ec2-user/w3a:/home/webuser
+      - ./:/home/webuser
 
   db:
     image: postgres
