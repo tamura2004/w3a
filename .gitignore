@@ -2,3 +2,8 @@ liner_sea
 binary_sea
 hash_sea
 index_cave
+*.csv
+.cache/
+.viminfo
+.bash_history
+10m.csv
