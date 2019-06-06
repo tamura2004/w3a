@@ -1,5 +1,9 @@
 40.times do |n|
 	name = "a%03d" % n
+	puts `createuser -d #{name}`
+end
+
+	name = "a%03d" % n
 	`sudo ln -s /home/tamura/project/ruby/w3a/index_cave /home/#{name}/index_cave`
 end
 
@@ -18,12 +22,6 @@ conn = PG::connect(
 	name = "a%03d" % n
 	# conn.exec("GRANT select ON m10 to #{name}")
 	conn.exec("ALTER USER #{name} WITH SUPERUSER")
-end
-
-40.times do |n|
-	name = "a%03d" % n
-	puts `dropuser #{name}`
-	puts `createuser -d #{name}`
 end
 
 outf = open("users.txt","w")
