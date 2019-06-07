@@ -6,9 +6,9 @@ base = Pathname.pwd + "index_cave"
 FileUtils.rm_rf(base) if base.exist?
 # base.mkpath
 
-bootstrap = [500000,400000,900000,350000,450000,700000,950000,600000,800000]
+bootstrap = [752413, 780104]
 
-items = (100000..999999).to_a.sample(8181)
+items = (100000..999999).to_a.sample(8189)
 items += [777777]
 items.shuffle!
 items = bootstrap + items
@@ -40,4 +40,3 @@ items.each do |item|
   puts item
   STDOUT.flush
 end
-
